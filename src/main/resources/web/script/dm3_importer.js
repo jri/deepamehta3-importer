@@ -14,8 +14,7 @@ function dm3_importer() {
 
     this.handle_special_command = function(command) {
         if (command == "Import...") {
-            var result = show_upload_dialog("deepamehta3-importer.start")
-            show_result(result)
+            show_upload_dialog("deepamehta3-importer.start", show_result)
         }
     }
 
@@ -28,5 +27,6 @@ function dm3_importer() {
 
 
     function show_result(result) {
+        alert("import result=" + JSON.stringify(result))
     }
 }
