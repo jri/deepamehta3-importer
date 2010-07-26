@@ -11,6 +11,7 @@ import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
@@ -59,7 +60,7 @@ public class ImporterPlugin extends Plugin {
     // ------------------------------------------------------------------------------------------------- Private Methods
 
     private void importFile(UploadedFile file) throws Exception {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(file.getInputStream()));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file.getFile())));
         StringBuilder builder = new StringBuilder();
         builder.append(reader.readLine() + "\n");
         builder.append(reader.readLine() + "\n");
