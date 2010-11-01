@@ -3,11 +3,11 @@ function dm3_importer() {
     // ------------------------------------------------------------------------------------------------ Overriding Hooks
 
     this.init = function() {
-        $("#special-select").append($("<option>").text("Import..."))
+        dm3c.add_to_special_menu({label: "Import..."})
     }
 
-    this.handle_special_command = function(command) {
-        if (command == "Import...") {
+    this.handle_special_command = function(label) {
+        if (label == "Import...") {
             dm3c.show_upload_dialog("deepamehta3-importer.start", show_result)
         }
     }
