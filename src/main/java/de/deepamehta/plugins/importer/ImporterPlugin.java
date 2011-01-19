@@ -39,7 +39,7 @@ public class ImporterPlugin extends Plugin {
 
 
     @Override
-    public JSONObject executeCommandHook(String command, Map params, Map<String, String> clientContext) {
+    public JSONObject executeCommandHook(String command, Map params, ClientContext clientContext) {
         if (command.equals("deepamehta3-importer.start")) {
             UploadedFile file = null;
             try {
