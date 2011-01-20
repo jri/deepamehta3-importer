@@ -1,5 +1,6 @@
 package de.deepamehta.plugins.importer;
 
+import de.deepamehta.core.model.ClientContext;
 import de.deepamehta.core.model.DataField;
 import de.deepamehta.core.model.Topic;
 import de.deepamehta.core.model.TopicType;
