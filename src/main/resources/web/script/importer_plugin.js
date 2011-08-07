@@ -1,18 +1,16 @@
-function dm3_importer() {
+function importer_plugin() {
 
     // ------------------------------------------------------------------------------------------------ Overriding Hooks
 
     this.init = function() {
-        dm3c.add_to_special_menu({label: "Import..."})
-    }
-
-    this.handle_special_command = function(label) {
-        if (label == "Import...") {
-            dm3c.show_upload_dialog("deepamehta3-importer.start", show_result)
-        }
+        dm4c.toolbar.special_menu.add_item({label: "Import...", handler: do_import})
     }
 
     // ----------------------------------------------------------------------------------------------- Private Functions
+
+    function do_import() {
+        dm4c.upload_dialog.show("deepamehta-importer.start", show_result)
+    }
 
     function show_result(result) {
         alert("import result=" + JSON.stringify(result))

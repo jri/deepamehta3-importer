@@ -1,8 +1,8 @@
 package de.deepamehta.plugins.importer;
 
-import de.deepamehta.core.model.ClientContext;
-import de.deepamehta.core.model.CommandParams;
-import de.deepamehta.core.model.CommandResult;
+import de.deepamehta.core.service.ClientContext;
+import de.deepamehta.core.service.CommandParams;
+import de.deepamehta.core.service.CommandResult;
 import de.deepamehta.core.service.Plugin;
 import de.deepamehta.core.util.UploadedFile;
 
@@ -33,7 +33,7 @@ public class ImporterPlugin extends Plugin {
 
     @Override
     public CommandResult executeCommandHook(String command, CommandParams params, ClientContext clientContext) {
-        if (command.equals("deepamehta3-importer.start")) {
+        if (command.equals("deepamehta-importer.start")) {
             UploadedFile file = null;
             try {
                 file = params.getFile("file");

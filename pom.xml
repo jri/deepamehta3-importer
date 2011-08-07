@@ -2,16 +2,16 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <name>DeepaMehta 3 Importer</name>
+    <name>DeepaMehta 4 Importer</name>
     <groupId>de.deepamehta</groupId>
-    <artifactId>deepamehta3-importer</artifactId>
-    <version>0.4.3-SNAPSHOT</version>
+    <artifactId>deepamehta-importer</artifactId>
+    <version>4.0.3-SNAPSHOT</version>
     <packaging>bundle</packaging>
 
     <parent>
         <groupId>de.deepamehta</groupId>
-        <artifactId>deepamehta3-plugin-parent</artifactId>
-        <version>0.4.5-SNAPSHOT</version>
+        <artifactId>deepamehta-plugin-parent</artifactId>
+        <version>4.0.3-SNAPSHOT</version>
     </parent>
 
     <build>
@@ -29,5 +29,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
